@@ -213,7 +213,7 @@ public class ResultActivity extends AppCompatActivity {
         private void Download_File() throws IOException {
             StorageReference gsReference = firebase.getStorageRef();
 
-            gsReference.child("file:///Downloads/to/secrets.txt").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            gsReference.child("file://Downloads/to/secrets.txt").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
                 public void onSuccess(Uri uri) {
                     Toast.makeText(ResultActivity.this, "The "+uri.toString(), Toast.LENGTH_SHORT).show();
